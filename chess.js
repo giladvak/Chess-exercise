@@ -1,4 +1,5 @@
 
+window.addEventListener('load',()=>{
 //create table element
 
 const table=document.createElement('table');
@@ -24,7 +25,7 @@ for (let i = 0; i <8 ; i++) {
    }
    
 }
-
+})
 
 
 
