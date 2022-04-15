@@ -7,7 +7,7 @@
     top: 10vh;
 }
 
-.board {
+.board1 {
     margin: 50px;
     width: 500px;
     height: 500px;
@@ -22,7 +22,7 @@
     background-color: white;
 }
 
-.outer {}
+
 
 .topletters {
 
@@ -88,7 +88,7 @@
     position: absolute;
     top: 12px;
     right: -5px;
-    transform: rotate(-43deg);
+    /* transform: rotate(-43deg); */
     
 }
 

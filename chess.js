@@ -5,6 +5,7 @@ window.addEventListener('load',()=>{
 const table=document.createElement('table');
 //apending table
 document.body.appendChild(table);
+
 table.classList.add ('board');
 
 //loop
