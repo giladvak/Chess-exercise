@@ -14,7 +14,7 @@
     border: 5px solid black;
 }
 
-.black {
+ .board1 :nth-child(0),.board1  {
     background-color: black;
 }
 
