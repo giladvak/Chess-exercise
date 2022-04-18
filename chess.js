@@ -45,20 +45,7 @@ let typeBlack='black'
         img.classList.add('tool')
         cell.appendChild(img)
     }
-    function addImageByIndex(cell,type,j){
-        if (j===0||j===7) {
-            getImg(cell,type,'rook')   
-        } else if (j===1||j===6){
-            getImg(cell,type,'knight')
-        }else if (j===2||j===5){
-            getImg(cell,type,'bishop')
-        }else if(j===3){
-            getImg(cell,type,'king')
-        }else if(j===4){
-            getImg(cell,type,'queen')
-        }
-    }
-   
+    
       
     function createBoard(){
         
@@ -112,16 +99,18 @@ let typeBlack='black'
                 pieces=getInitialBoard(0,typeWhite,1);
                 pieces1=getInitialBoard(7,typeBlack,6);
                 
-                blackOrWhite(pieces)
-                blackOrWhite(pieces1)
-                function blackOrWhite(arr){
-                for(let piece of arr){
+                
+                for(let piece of pieces1){
                     getImg(table.rows[piece.row].cells[piece.col],piece.player,piece.type);
+                    
                 }
-            }
-              
+                for(let piece of pieces){
+                    getImg(table.rows[piece.row].cells[piece.col],piece.player,piece.type);
+                    
+                }
+            }   
                
-          }
+          
          
         
         
