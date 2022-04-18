@@ -17,39 +17,28 @@ let typeBlack='black'
         }
         
       }
-      function getInitialBoard(){
+      function getInitialBoard(x,type,c){
           let result=[];
-         result.push(new Piece(0,0, 'rook', typeWhite))
-         result.push(new Piece(0,1, 'knight',typeWhite))
-         result.push(new Piece(0,2, 'bishop', typeWhite))
-         result.push(new Piece(0,3, 'king',typeWhite))
-         result.push(new Piece(0,4, 'queen', typeWhite))
-         result.push(new Piece(0,5, 'bishop',typeWhite))
-         result.push(new Piece(0,6, 'knight', typeWhite))
-         result.push(new Piece(0,7, 'rook',typeWhite))
+         result.push(new Piece(x,0, 'rook', type))
+         result.push(new Piece(x,1, 'knight',type))
+         result.push(new Piece(x,2, 'bishop', type))
+         result.push(new Piece(x,3, 'king',type))
+         result.push(new Piece(x,4, 'queen', type))
+         result.push(new Piece(x,5, 'bishop',type))
+         result.push(new Piece(x,6, 'knight', type))
+         result.push(new Piece(x,7, 'rook',type))
+        
          for (let i = 0; i < 8; i++) {
-            result.push(new Piece(1,i,'pawn',typeWhite))
+            result.push(new Piece(c,i,'pawn',type))
              
          }
           return result;
           
+          
+              
+          
       }
-      function getInitialBoardBlack(){
-        let result=[];
-       result.push(new Piece(7,0, 'rook', typeBlack))
-       result.push(new Piece(7,1, 'knight',typeBlack))
-       result.push(new Piece(7,2, 'bishop', typeBlack))
-       result.push(new Piece(7,3, 'king',typeBlack))
-       result.push(new Piece(7,4, 'queen', typeBlack))
-       result.push(new Piece(7,5, 'bishop',typeBlack))
-       result.push(new Piece(7,6, 'knight', typeBlack))
-       result.push(new Piece(7,7, 'rook',typeBlack))
-       for (let i = 0; i < 8; i++) {
-          result.push(new Piece(6,i,'pawn',typeBlack))
-           
-       }
-        return result;
-    }
+ 
     function getImg(cell,type,name){
         const img =  document.createElement('img');
         img.src = 'pawns/' + type + '/' + name + '.svg'
@@ -98,15 +87,6 @@ let typeBlack='black'
 
                 } 
                
-                // if (i===0){
-                // addImageByIndex(cell,typeWhite,j)
-                // } else if (i===7){
-                //  addImageByIndex(cell,typeBlack,j)
-                // }
-                // if (i===1){
-                //     getImg(cell,typeWhite,'pawn')
-                // }else if (i===6){
-                //     getImg(cell,typeBlack,'pawn')}
 
                
                     function removeColor(){
@@ -127,9 +107,11 @@ let typeBlack='black'
                    
             }
               
-            }                                                                                               
-                pieces=getInitialBoard();
-                pieces1=getInitialBoardBlack();
+            }       
+                                                                                                    
+                pieces=getInitialBoard(0,typeWhite,1);
+                pieces1=getInitialBoard(7,typeBlack,6);
+                
                 blackOrWhite(pieces)
                 blackOrWhite(pieces1)
                 function blackOrWhite(arr){
