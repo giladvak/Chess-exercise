@@ -1,1 +1,1 @@
-This is my Chessboard exercise, Enjoy!
+זו לא התיקייה העדכנית 
